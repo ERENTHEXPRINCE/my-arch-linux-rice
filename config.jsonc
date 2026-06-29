@@ -1,0 +1,36 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 38,
+    "spacing": 5,
+    "modules-left": ["hyprland/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["pulseaudio", "network", "battery"],
+
+    "hyprland/workspaces": {
+        "disable-scroll": true,
+        "all-outputs": true,
+        "format": "󰮯 {name}",
+        "persistent-workspaces": {
+            "*": 5 // Keeps 5 slides visible by default so you can see the track layout
+        }
+    },
+    "clock": {
+        "format": "󱑂 {:%I:%M %p  󰃭 %a %b %d}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+    },
+    "battery": {
+        "states": { "warning": 30, "critical": 15 },
+        "format": "{icon} {capacity}%",
+        "format-charging": "󱐋 {capacity}%",
+        "format-icons": ["󰂎", "󰁺", "󰁼", "󰁾", "󰂀", "󰂂", "󰁹"]
+    },
+    "network": {
+        "format-wifi": "  {essid}",
+        "format-disconnected": "󰖪 Disconnected"
+    },
+    "pulseaudio": {
+        "format": "󰕾 {volume}%",
+        "format-muted": "󰝟 Muted"
+    }
+}
