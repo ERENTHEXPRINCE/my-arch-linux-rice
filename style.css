@@ -1,0 +1,52 @@
+k/* Custom rounded typography */
+* {
+    font-family: "monospace";
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Base bar matching the deep dark blue of the train cabin */
+window#waybar {
+    background-color: rgba(14, 16, 28, 0.75);
+    border-bottom: 2px solid #00f0ff; /* Electric cyan edge line */
+    color: #ffffff;
+}
+
+/* Rounded pills matching the soft neon glow of the cats & screens */
+#workspaces, #clock, #battery, #network, #pulseaudio {
+    background-color: rgba(0, 240, 255, 0.06);
+    border: 1px solid rgba(0, 240, 255, 0.25);
+    border-radius: 14px;
+    padding: 2px 14px;
+    margin: 4px 6px;
+}
+
+/* The Workspace Slide Tracks */
+#workspaces button {
+    padding: 0 8px;
+    color: rgba(255, 255, 255, 0.4); /* Inactive slides are dim/translucent */
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+/* The slide page you are currently on */
+#workspaces button.active {
+    color: #00f0ff; /* Bright electric cyan */
+    border-bottom: 3px solid #00f0ff; /* Sharp indicator underline showing active page */
+    background-color: rgba(0, 240, 255, 0.1);
+    border-radius: 4px;
+}
+
+/* Hovering over slides */
+#workspaces button:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#clock {
+    color: #00f0ff; /* Cyan clock text to match the center monitors */
+}
+
+#battery.charging {
+    color: #50fa7b; /* Soft eco green for power tracking */
+}
